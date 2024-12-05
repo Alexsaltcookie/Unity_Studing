@@ -8,10 +8,16 @@ public class CameraofplayerController : MonoBehaviour
     private float mouseX, mouseY; //鼠标移动的值
     public float MouseSensity;//鼠标灵敏度
     public float xRotation;
-    private void Update()
+
+    public void Start()
+    {
+        Cursor.visible = false;
+    }
+    public void Update()
     {
         CameraRotation();
     }
+   
     private void CameraRotation()
     {
         mouseX = Input.GetAxis("Mouse X") * MouseSensity * Time.deltaTime;
